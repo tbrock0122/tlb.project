@@ -1,0 +1,20 @@
+Package: tlb.project
+Title: Run Linear Regression Analysis
+Version: 0.0.0.9000
+Authors@R: 
+    person(given = "Tyler",
+           family = "Brock",
+           role = c("aut", "cre"),
+           email = "tyler.brock@selu.edu")
+Description: What the package does (one paragraph).
+Depends:
+  R (>= 3.0.0)
+Imports:
+  tidyverse, assertthat
+License: MIT
+Encoding: UTF-8
+LazyData: true
+Suggests:
+  knitr, rmarkdown, testthat
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.1
