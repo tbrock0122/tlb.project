@@ -14,14 +14,16 @@ linear_regression <- function(variable_1, variable_2) {
 
 
 
-#' Run a linear regression analysis of two chosen variables in a dataset, then print resulting graph to screen.
+#' Run a linear regression analysis of two chosen variables in a dataset, check normality, then print resulting graph to screen.
 #' 
 #' @param variable_1: response variable (y-axis/dependent)
 #' @param varible_2: predictor variable (x-axis/independent)
-#' @return graph printed to screen
+#' @return qqline graph printed to screen
 
 
 linear_regression_full <- function(variable_1, variable_2) {
+  assertthat::is.scalar(variable_1)
+  assertthat::is.scalar(variable_2)
   model_fit <- lm(variable_1 ~ variable_2)
   summary <- summary(model_fit)
   augmented_fit <- broom::augment(model_fit)
