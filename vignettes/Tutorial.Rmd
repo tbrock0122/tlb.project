@@ -21,6 +21,14 @@ remind peeps to read in package
 library(tlb.project)
 ```
 
-## 
+## Easy Analysis
+
+This package is meant to streamline the process of performing simple statistical analyses using linear data. Namely, performing a linear regression analysis between two variables in a data set.
 
 provide rationale for why someone might need to do this analysis. explain how functions work (e.g. what types of data used, what outputs are, what's expected for inputs)
+
+```{r}
+
+linear_regression(Data$Estimated_Age, Data$SVL)
+
+```
