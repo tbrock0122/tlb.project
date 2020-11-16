@@ -29,6 +29,8 @@ provide rationale for why someone might need to do this analysis. explain how fu
 
 ```{r}
 
+Data <- read.csv("../inst/extdata/Data.csv")
 linear_regression(Data$Estimated_Age, Data$SVL)
+
 
 ```
