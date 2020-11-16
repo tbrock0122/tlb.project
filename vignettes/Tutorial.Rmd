@@ -1,0 +1,26 @@
+---
+title: "Tutorial"
+author: "TLB"
+date: "11/16/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+How to install package
+
+``` {r}
+devtools::install_github("tbrock0122/tlb.project")
+```
+
+remind peeps to read in package
+
+```{r}
+library(tlb.project)
+```
+
+## 
+
+provide rationale for why someone might need to do this analysis. explain how functions work (e.g. what types of data used, what outputs are, what's expected for inputs)
