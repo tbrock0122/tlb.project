@@ -1,3 +1,3 @@
 # tlb.project
 ## Author: Tyler L. Brock
-### short description of what package does
+### The purpose of this project is to condense simple statistical tests into single, easy to use functions.
