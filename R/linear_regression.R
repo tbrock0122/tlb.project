@@ -3,6 +3,8 @@
 #' @param variable_1: response variable (y-axis/dependent)
 #' @param varible_2: predictor variable (x-axis/independent)
 #' @return table of summary statistics printed to screen
+#' 
+#' @export
 
 
 linear_regression <- function(variable_1, variable_2) {
