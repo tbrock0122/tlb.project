@@ -6,6 +6,8 @@
 
 
 linear_regression <- function(variable_1, variable_2) {
+  assertthat::is.scalar(variable_1)
+  assertthat::is.scalar(variable_2)
   model_fit <- lm(variable_1 ~ variable_2)
   summary <- summary(model_fit)
   return(summary)
