@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Function reference • tlb.project</title>
+<title>Run an ANOVA for chosen variables in a dataset, then print summary to screen. — simple_anova • tlb.project</title>
 
 
 <!-- jquery -->
@@ -39,7 +39,8 @@
 
 
 
-<meta property="og:title" content="Function reference" />
+<meta property="og:title" content="Run an ANOVA for chosen variables in a dataset, then print summary to screen. — simple_anova" />
+<meta property="og:description" content="Run an ANOVA for chosen variables in a dataset, then print summary to screen." />
 
 
 
@@ -58,7 +59,7 @@
   </head>
 
   <body data-spy="scroll" data-target="#toc">
-    <div class="container template-reference-index">
+    <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -112,60 +113,37 @@
       </header>
 
 <div class="row">
-  <div class="contents col-md-9">
+  <div class="col-md-9 contents">
     <div class="page-header">
-      <h1>Reference</h1>
+    <h1>Run an ANOVA for chosen variables in a dataset, then print summary to screen.</h1>
+    
+    <div class="hidden name"><code>simple_anova.Rd</code></div>
     </div>
 
-    <table class="ref-index">
+    <div class="ref-description">
+    <p>Run an ANOVA for chosen variables in a dataset, then print summary to screen.</p>
+    </div>
 
-    <colgroup>
-      
-      <col class="alias" />
-      <col class="title" />
-    </colgroup>
+    <pre class="usage"><span class='fu'>simple_anova</span><span class='op'>(</span><span class='va'>variable_1</span>, <span class='va'>variable_2</span><span class='op'>)</span></pre>
 
-    <tbody>
-      <tr>
-        <th colspan="2">
-          <h2 id="section-all-functions" class="hasAnchor"><a href="#section-all-functions" class="anchor"></a>All functions</h2>
-          <p class="section-desc"></p>
-        </th>
-      </tr>
-      
-      
-    </tbody><tbody>
-      
-      
-      <tr>
-        
-        <td>
-          <p><code><a href="linear_regression.html">linear_regression()</a></code> </p>
-        </td>
-        <td><p>Run a linear regression analysis of two chosen variables in a dataset, then print summary to screen.</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="linear_regression_full.html">linear_regression_full()</a></code> </p>
-        </td>
-        <td><p>Run a linear regression analysis of two chosen variables in a dataset, check normality, then print resulting graph to screen.</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="simple_anova.html">simple_anova()</a></code> </p>
-        </td>
-        <td><p>Run an ANOVA for chosen variables in a dataset, then print summary to screen.</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="square_calc.html">square_calc()</a></code> </p>
-        </td>
-        <td><p>Calculates the area of a square</p></td>
-      </tr>
-    </tbody>
+    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
+    <table class="ref-arguments">
+    <colgroup><col class="name" /><col class="desc" /></colgroup>
+    <tr>
+      <th>variable_1:</th>
+      <td><p>response variable (y-axis/dependent)</p></td>
+    </tr>
+    <tr>
+      <th>varible_2:</th>
+      <td><p>categorical predictor variable (x-axis/independent)</p></td>
+    </tr>
     </table>
-  </div>
 
+    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
+
+    <p>table of summary statistics printed to screen</p>
+
+  </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
       <h2 data-toc-skip>Contents</h2>

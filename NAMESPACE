@@ -2,4 +2,5 @@
 
 export(linear_regression)
 export(linear_regression_full)
+export(simple_anova)
 export(square_calc)
