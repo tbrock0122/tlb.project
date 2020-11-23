@@ -1,12 +1,12 @@
 Package: tlb.project
-Title: Run Linear Regression Analysis
+Title: Linear Analyses Made Easy
 Version: 0.0.0.9000
 Authors@R: 
     person(given = "Tyler",
            family = "Brock",
            role = c("aut", "cre"),
            email = "tyler.brock@selu.edu")
-Description: What the package does (one paragraph).
+Description:This package is meant to streamline the process of performing simple statistical analyses using linear data. Namely, performing a linear regression analysis between two variables in a data set.
 Depends:
   R (>= 3.0.0)
 Imports:
