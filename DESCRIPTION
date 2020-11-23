@@ -8,7 +8,7 @@ Authors@R:
            email = "tyler.brock@selu.edu")
 Description:This package is meant to streamline the process of performing simple statistical analyses using linear data. Namely, performing a linear regression analysis between two variables in a data set.
 Depends:
-  R (>= 3.0.0)
+  R (>= 4.0.0)
 Imports:
   tidyverse, assertthat
 License: MIT
