@@ -15,7 +15,7 @@ How to install package
 devtools::install_github("tbrock0122/tlb.project")
 ```
 
-remind peeps to read in package
+Don't forget to read in the package as well.
 
 ```{r}
 library(tlb.project)
