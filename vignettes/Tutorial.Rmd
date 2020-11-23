@@ -9,7 +9,7 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-How to install package
+Use this command to install the package. When prompted, enter '3' to skip updates.
 
 ``` {r, eval=FALSE}
 devtools::install_github("tbrock0122/tlb.project")
@@ -23,16 +23,20 @@ library(tlb.project)
 
 ## Easy Analysis
 
-This package is meant to streamline the process of performing simple statistical analyses using linear data. Namely, performing a linear regression analysis between two variables in a data set.
+This package is meant to streamline the process of performing simple statistical analyses using linear data. Namely, performing linear regression analyses and analyses of variance between two variables in a data set. 
 
 provide rationale for why someone might need to do this analysis. explain how functions work (e.g. what types of data used, what outputs are, what's expected for inputs)
 
-# Linear Regression Analysis
+## Linear Regression Analysis
+
+# Function 1 - linear_regression
+Simple linear regressions are used to determine the relationship between a response variable and a single numerical predictor variable. This function allows you to fit your chosen data to a linear model, perform the regression, and print the resulting statistics to the screen in a single line of code. Simply provide which columns of data you'd like to investigate, making sure that variable_2 is numerical data.
 
 ```{r}
 file_path <- system.file("extdata", "Data.csv", package="tlb.project")
-read.csv(file_path)
+Data <- read.csv(file_path)
 
+linear_regression(Data$Estimated_Age, Data$SVL)
 ```
 
 
@@ -41,3 +45,10 @@ read.csv(file_path)
 
 ```
 # Analysis of Variance (ANOVA)
+
+Simple ANOVA are used to determine the relationship between a response variable and a single categorical predictor variable.
+
+```{r}
+simple_anova(Data$SVL, Data$Life_Stage)
+
+```
