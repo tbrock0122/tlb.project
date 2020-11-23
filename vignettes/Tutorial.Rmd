@@ -27,3 +27,17 @@ This package is meant to streamline the process of performing simple statistical
 
 provide rationale for why someone might need to do this analysis. explain how functions work (e.g. what types of data used, what outputs are, what's expected for inputs)
 
+# Linear Regression Analysis
+
+```{r}
+file_path <- system.file("extdata", "Data.csv", package="tlb.project")
+read.csv(file_path)
+
+```
+
+
+
+```{r}
+
+```
+# Analysis of Variance (ANOVA)
