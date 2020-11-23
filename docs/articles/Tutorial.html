@@ -85,17 +85,71 @@
 
     
     
-<p>How to install package</p>
+<p>Use this command to install the package. When prompted, enter ‘3’ to skip updates.</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu">devtools</span><span class="fu">::</span><span class="fu"><a href="https://devtools.r-lib.org//reference/remote-reexports.html">install_github</a></span><span class="op">(</span><span class="st">"tbrock0122/tlb.project"</span><span class="op">)</span></code></pre></div>
 <p>Don’t forget to read in the package as well.</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va">tlb.project</span><span class="op">)</span></code></pre></div>
-<div id="easy-analysis" class="section level2">
-<h2 class="hasAnchor">
-<a href="#easy-analysis" class="anchor"></a>Easy Analysis</h2>
-<p>This package is meant to streamline the process of performing simple statistical analyses using linear data. Namely, performing a linear regression analysis between two variables in a data set.</p>
+<div id="easy-analysis" class="section level1">
+<h1 class="hasAnchor">
+<a href="#easy-analysis" class="anchor"></a>Easy Analysis</h1>
+<p>This package is meant to streamline the process of performing simple statistical analyses using linear data. Namely, performing linear regression analyses and analyses of variance between two variables in a data set.</p>
 <p>provide rationale for why someone might need to do this analysis. explain how functions work (e.g. what types of data used, what outputs are, what’s expected for inputs)</p>
+</div>
+<div id="linear-regression-analysis" class="section level1">
+<h1 class="hasAnchor">
+<a href="#linear-regression-analysis" class="anchor"></a>Linear Regression Analysis</h1>
+<div id="function-1---linear_regression" class="section level2">
+<h2 class="hasAnchor">
+<a href="#function-1---linear_regression" class="anchor"></a>Function 1 - linear_regression</h2>
+<p>Simple linear regressions are used to determine the relationship between a response variable and a single numerical predictor variable. This function allows you to fit your chosen data to a linear model, perform the regression, and print the resulting statistics to the screen in a single line of code. Simply provide which columns of data you’d like to investigate, making sure that variable_2 is numerical data.</p>
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="va">file_path</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/system.file.html">system.file</a></span><span class="op">(</span><span class="st">"extdata"</span>, <span class="st">"Data.csv"</span>, package<span class="op">=</span><span class="st">"tlb.project"</span><span class="op">)</span>
+<span class="va">Data</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/utils/read.table.html">read.csv</a></span><span class="op">(</span><span class="va">file_path</span><span class="op">)</span>
+
+<span class="fu"><a href="../reference/linear_regression.html">linear_regression</a></span><span class="op">(</span><span class="va">Data</span><span class="op">$</span><span class="va">Estimated_Age</span>, <span class="va">Data</span><span class="op">$</span><span class="va">SVL</span><span class="op">)</span></code></pre></div>
+<pre><code>## 
+## Call:
+## lm(formula = variable_1 ~ variable_2)
+## 
+## Residuals:
+##     Min      1Q  Median      3Q     Max 
+## -4.3493 -0.7593  0.0971  1.2137  3.7783 
+## 
+## Coefficients:
+##              Estimate Std. Error t value Pr(&gt;|t|)    
+## (Intercept) -11.32173    0.99543  -11.37 3.51e-16 ***
+## variable_2    1.59581    0.04921   32.43  &lt; 2e-16 ***
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+## 
+## Residual standard error: 1.765 on 56 degrees of freedom
+## Multiple R-squared:  0.9494, Adjusted R-squared:  0.9485 
+## F-statistic:  1051 on 1 and 56 DF,  p-value: &lt; 2.2e-16</code></pre>
+</div>
+<div id="function-2---linear_regression_full" class="section level2">
+<h2 class="hasAnchor">
+<a href="#function-2---linear_regression_full" class="anchor"></a>Function 2 - linear_regression_full</h2>
+<p>Function 2 is very similar to Function 1 in that both use the same inputs and both perform a linear regression, though the outputs are completely different. This function checks if the residuals from the linear regression have a normal distribution, and prints a Normal Q-Q Plot to the screen for us to interpret. The closer the data lie to the line, the more normal the distribution.</p>
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="../reference/linear_regression_full.html">linear_regression_full</a></span><span class="op">(</span><span class="va">Data</span><span class="op">$</span><span class="va">Estimated_Age</span>, <span class="va">Data</span><span class="op">$</span><span class="va">SVL</span><span class="op">)</span></code></pre></div>
+<p><img src="Tutorial_files/figure-html/unnamed-chunk-4-1.png" width="700"></p>
+<pre><code>## NULL</code></pre>
+<p>In this example, the majority of the data lie on or close to the line, implying normality, though the values at the lower extreme show greater deviation</p>
+</div>
+<div id="analysis-of-variance-anova" class="section level2">
+<h2 class="hasAnchor">
+<a href="#analysis-of-variance-anova" class="anchor"></a>Analysis of Variance (ANOVA)</h2>
+<p>Simple ANOVA are used to determine the relationship between a response variable and a single categorical predictor variable.</p>
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="../reference/simple_anova.html">simple_anova</a></span><span class="op">(</span><span class="va">Data</span><span class="op">$</span><span class="va">SVL</span>, <span class="va">Data</span><span class="op">$</span><span class="va">Life_Stage</span><span class="op">)</span></code></pre></div>
+<pre><code>##             Df Sum Sq Mean Sq F value   Pr(&gt;F)    
+## variable_2   2  766.3   383.2   40.48 1.55e-11 ***
+## Residuals   55  520.5     9.5                     
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
+</div>
 </div>
   </div>
 

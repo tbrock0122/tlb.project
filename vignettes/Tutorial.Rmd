@@ -21,15 +21,15 @@ Don't forget to read in the package as well.
 library(tlb.project)
 ```
 
-## Easy Analysis
+# Easy Analysis
 
 This package is meant to streamline the process of performing simple statistical analyses using linear data. Namely, performing linear regression analyses and analyses of variance between two variables in a data set. 
 
 provide rationale for why someone might need to do this analysis. explain how functions work (e.g. what types of data used, what outputs are, what's expected for inputs)
 
-## Linear Regression Analysis
+# Linear Regression Analysis
 
-# Function 1 - linear_regression
+## Function 1 - linear_regression
 Simple linear regressions are used to determine the relationship between a response variable and a single numerical predictor variable. This function allows you to fit your chosen data to a linear model, perform the regression, and print the resulting statistics to the screen in a single line of code. Simply provide which columns of data you'd like to investigate, making sure that variable_2 is numerical data.
 
 ```{r}
@@ -38,13 +38,18 @@ Data <- read.csv(file_path)
 
 linear_regression(Data$Estimated_Age, Data$SVL)
 ```
-
+## Function 2 - linear_regression_full
+Function 2 is very similar to Function 1 in that both use the same inputs and both perform a linear regression, though the outputs are completely different. This function checks if the residuals from the linear regression have a normal distribution, and prints a Normal Q-Q Plot to the screen for us to interpret. The closer the data lie to the line, the more normal the distribution.
 
 
 ```{r}
+linear_regression_full(Data$Estimated_Age, Data$SVL)
 
 ```
-# Analysis of Variance (ANOVA)
+In this example, the majority of the data lie on or close to the line, implying normality, though the values at the lower extreme show greater deviation 
+
+
+## Analysis of Variance (ANOVA)
 
 Simple ANOVA are used to determine the relationship between a response variable and a single categorical predictor variable.
 
