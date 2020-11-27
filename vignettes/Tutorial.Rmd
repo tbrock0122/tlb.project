@@ -27,8 +27,6 @@ This package is meant to streamline the process of performing simple statistical
 
 provide rationale for why someone might need to do this analysis. explain how functions work (e.g. what types of data used, what outputs are, what's expected for inputs)
 
-# Linear Regression Analysis
-
 ## Function 1 - linear_regression
 Simple linear regressions are used to determine the relationship between a response variable and a single numerical predictor variable. This function allows you to fit your chosen data to a linear model, perform the regression, and print the resulting statistics to the screen in a single line of code. Simply provide which columns of data you'd like to investigate, making sure that variable_2 is numerical data.
 
@@ -46,12 +44,12 @@ Function 2 is very similar to Function 1 in that both use the same inputs and bo
 linear_regression_full(Data$Estimated_Age, Data$SVL)
 
 ```
-In this example, the majority of the data lie on or close to the line, implying normality, though the values at the lower extreme show greater deviation 
+In this example, the majority of the data lie on or close to the line, implying normality, though the values at the lower extreme do show greater deviation due to the hypothetical data supplied. 
 
 
-## Analysis of Variance (ANOVA)
+## Function 3 - simple_anova
 
-Simple ANOVA are used to determine the relationship between a response variable and a single categorical predictor variable.
+Analyses of variance (ANOVAs) are used to determine the relationship between a response variable and a single categorical predictor variable, whereas the previous regression functions used a numerical predictor.
 
 ```{r}
 simple_anova(Data$SVL, Data$Life_Stage)

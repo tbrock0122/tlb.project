@@ -96,10 +96,6 @@
 <a href="#easy-analysis" class="anchor"></a>Easy Analysis</h1>
 <p>This package is meant to streamline the process of performing simple statistical analyses using linear data. Namely, performing linear regression analyses and analyses of variance between two variables in a data set.</p>
 <p>provide rationale for why someone might need to do this analysis. explain how functions work (e.g. what types of data used, what outputs are, what’s expected for inputs)</p>
-</div>
-<div id="linear-regression-analysis" class="section level1">
-<h1 class="hasAnchor">
-<a href="#linear-regression-analysis" class="anchor"></a>Linear Regression Analysis</h1>
 <div id="function-1---linear_regression" class="section level2">
 <h2 class="hasAnchor">
 <a href="#function-1---linear_regression" class="anchor"></a>Function 1 - linear_regression</h2>
@@ -136,12 +132,12 @@
 <code class="sourceCode R"><span class="fu"><a href="../reference/linear_regression_full.html">linear_regression_full</a></span><span class="op">(</span><span class="va">Data</span><span class="op">$</span><span class="va">Estimated_Age</span>, <span class="va">Data</span><span class="op">$</span><span class="va">SVL</span><span class="op">)</span></code></pre></div>
 <p><img src="Tutorial_files/figure-html/unnamed-chunk-4-1.png" width="700"></p>
 <pre><code>## NULL</code></pre>
-<p>In this example, the majority of the data lie on or close to the line, implying normality, though the values at the lower extreme show greater deviation</p>
+<p>In this example, the majority of the data lie on or close to the line, implying normality, though the values at the lower extreme do show greater deviation due to the hypothetical data supplied.</p>
 </div>
-<div id="analysis-of-variance-anova" class="section level2">
+<div id="function-3---simple_anova" class="section level2">
 <h2 class="hasAnchor">
-<a href="#analysis-of-variance-anova" class="anchor"></a>Analysis of Variance (ANOVA)</h2>
-<p>Simple ANOVA are used to determine the relationship between a response variable and a single categorical predictor variable.</p>
+<a href="#function-3---simple_anova" class="anchor"></a>Function 3 - simple_anova</h2>
+<p>Analyses of variance (ANOVAs) are used to determine the relationship between a response variable and a single categorical predictor variable, whereas the previous regression functions used a numerical predictor.</p>
 <div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="../reference/simple_anova.html">simple_anova</a></span><span class="op">(</span><span class="va">Data</span><span class="op">$</span><span class="va">SVL</span>, <span class="va">Data</span><span class="op">$</span><span class="va">Life_Stage</span><span class="op">)</span></code></pre></div>
 <pre><code>##             Df Sum Sq Mean Sq F value   Pr(&gt;F)    
