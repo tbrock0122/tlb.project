@@ -23,9 +23,8 @@ library(tlb.project)
 
 # Easy Analysis
 
-This package is meant to streamline the process of performing simple statistical analyses using linear data. Namely, performing linear regression analyses and analyses of variance between two variables in a data set. 
+This package is meant to streamline the process of performing simple statistical analyses using linear data. Namely, performing linear regression analyses and analyses of variance between two variables in a data set. Both of these analyses are quite useful in determining if there are statistically significant relationships/interactions between the different kinds of data you may be taking in a project, and are commonly used for introductory biostatistics.
 
-provide rationale for why someone might need to do this analysis. explain how functions work (e.g. what types of data used, what outputs are, what's expected for inputs)
 
 ## Function 1 - linear_regression
 Simple linear regressions are used to determine the relationship between a response variable and a single numerical predictor variable. This function allows you to fit your chosen data to a linear model, perform the regression, and print the resulting statistics to the screen in a single line of code. Simply provide which columns of data you'd like to investigate, making sure that variable_2 is numerical data.
@@ -49,7 +48,7 @@ In this example, the majority of the data lie on or close to the line, implying 
 
 ## Function 3 - simple_anova
 
-Analyses of variance (ANOVAs) are used to determine the relationship between a response variable and a single categorical predictor variable, whereas the previous regression functions used a numerical predictor.
+Analyses of variance (ANOVAs) are used to determine the relationship between a response variable and a single categorical predictor variable, whereas the previous regression functions used a numerical predictor. Again, all you need to provide are the data columns you want to investigate, then the function will perform the ANOVA and print out the ANOVA table to the screen.
 
 ```{r}
 simple_anova(Data$SVL, Data$Life_Stage)

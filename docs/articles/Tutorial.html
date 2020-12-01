@@ -94,8 +94,7 @@
 <div id="easy-analysis" class="section level1">
 <h1 class="hasAnchor">
 <a href="#easy-analysis" class="anchor"></a>Easy Analysis</h1>
-<p>This package is meant to streamline the process of performing simple statistical analyses using linear data. Namely, performing linear regression analyses and analyses of variance between two variables in a data set.</p>
-<p>provide rationale for why someone might need to do this analysis. explain how functions work (e.g. what types of data used, what outputs are, what’s expected for inputs)</p>
+<p>This package is meant to streamline the process of performing simple statistical analyses using linear data. Namely, performing linear regression analyses and analyses of variance between two variables in a data set. Both of these analyses are quite useful in determining if there are statistically significant relationships/interactions between the different kinds of data you may be taking in a project, and are commonly used for introductory biostatistics.</p>
 <div id="function-1---linear_regression" class="section level2">
 <h2 class="hasAnchor">
 <a href="#function-1---linear_regression" class="anchor"></a>Function 1 - linear_regression</h2>
@@ -137,7 +136,7 @@
 <div id="function-3---simple_anova" class="section level2">
 <h2 class="hasAnchor">
 <a href="#function-3---simple_anova" class="anchor"></a>Function 3 - simple_anova</h2>
-<p>Analyses of variance (ANOVAs) are used to determine the relationship between a response variable and a single categorical predictor variable, whereas the previous regression functions used a numerical predictor.</p>
+<p>Analyses of variance (ANOVAs) are used to determine the relationship between a response variable and a single categorical predictor variable, whereas the previous regression functions used a numerical predictor. Again, all you need to provide are the data columns you want to investigate, then the function will perform the ANOVA and print out the ANOVA table to the screen.</p>
 <div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="../reference/simple_anova.html">simple_anova</a></span><span class="op">(</span><span class="va">Data</span><span class="op">$</span><span class="va">SVL</span>, <span class="va">Data</span><span class="op">$</span><span class="va">Life_Stage</span><span class="op">)</span></code></pre></div>
 <pre><code>##             Df Sum Sq Mean Sq F value   Pr(&gt;F)    
