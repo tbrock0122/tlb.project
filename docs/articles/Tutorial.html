@@ -91,6 +91,9 @@
 <p>Don’t forget to read in the package as well.</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va">tlb.project</span><span class="op">)</span></code></pre></div>
+<p>Edit the destfile in the command below to download this tutorial to your personal device.</p>
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/utils/download.file.html">download.file</a></span><span class="op">(</span>url <span class="op">=</span> <span class="st">"https://raw.githubusercontent.com/tbrock0122/tlb.project/master/vignettes/Tutorial.Rmd"</span>, destfile <span class="op">=</span> <span class="st">"C:/Users/xxx/xxx.Rmd"</span><span class="op">)</span></code></pre></div>
 <div id="easy-analysis" class="section level1">
 <h1 class="hasAnchor">
 <a href="#easy-analysis" class="anchor"></a>Easy Analysis</h1>
@@ -99,7 +102,7 @@
 <h2 class="hasAnchor">
 <a href="#function-1---linear_regression" class="anchor"></a>Function 1 - linear_regression</h2>
 <p>Simple linear regressions are used to determine the relationship between a response variable and a single numerical predictor variable. This function allows you to fit your chosen data to a linear model, perform the regression, and print the resulting statistics to the screen in a single line of code. Simply provide which columns of data you’d like to investigate, making sure that variable_2 is numerical data.</p>
-<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">file_path</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/system.file.html">system.file</a></span><span class="op">(</span><span class="st">"extdata"</span>, <span class="st">"Data.csv"</span>, package<span class="op">=</span><span class="st">"tlb.project"</span><span class="op">)</span>
 <span class="va">Data</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/utils/read.table.html">read.csv</a></span><span class="op">(</span><span class="va">file_path</span><span class="op">)</span>
 
@@ -127,9 +130,9 @@
 <h2 class="hasAnchor">
 <a href="#function-2---linear_regression_full" class="anchor"></a>Function 2 - linear_regression_full</h2>
 <p>Function 2 is very similar to Function 1 in that both use the same inputs and both perform a linear regression, though the outputs are completely different. This function checks if the residuals from the linear regression have a normal distribution, and prints a Normal Q-Q Plot to the screen for us to interpret. The closer the data lie to the line, the more normal the distribution.</p>
-<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="../reference/linear_regression_full.html">linear_regression_full</a></span><span class="op">(</span><span class="va">Data</span><span class="op">$</span><span class="va">Estimated_Age</span>, <span class="va">Data</span><span class="op">$</span><span class="va">SVL</span><span class="op">)</span></code></pre></div>
-<p><img src="Tutorial_files/figure-html/unnamed-chunk-4-1.png" width="700"></p>
+<p><img src="Tutorial_files/figure-html/unnamed-chunk-5-1.png" width="700"></p>
 <pre><code>## NULL</code></pre>
 <p>In this example, the majority of the data lie on or close to the line, implying normality, though the values at the lower extreme do show greater deviation due to the hypothetical data supplied.</p>
 </div>
@@ -137,7 +140,7 @@
 <h2 class="hasAnchor">
 <a href="#function-3---simple_anova" class="anchor"></a>Function 3 - simple_anova</h2>
 <p>Analyses of variance (ANOVAs) are used to determine the relationship between a response variable and a single categorical predictor variable, whereas the previous regression functions used a numerical predictor. Again, all you need to provide are the data columns you want to investigate, then the function will perform the ANOVA and print out the ANOVA table to the screen.</p>
-<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="../reference/simple_anova.html">simple_anova</a></span><span class="op">(</span><span class="va">Data</span><span class="op">$</span><span class="va">SVL</span>, <span class="va">Data</span><span class="op">$</span><span class="va">Life_Stage</span><span class="op">)</span></code></pre></div>
 <pre><code>##             Df Sum Sq Mean Sq F value   Pr(&gt;F)    
 ## variable_2   2  766.3   383.2   40.48 1.55e-11 ***
